@@ -4,6 +4,7 @@
 int multiplyBy8(int v)
 {
 	// TODO: multiply the number by 8
+	v << 3;
 	return v;
 }
 
