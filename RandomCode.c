@@ -10,19 +10,19 @@ int multiplyBy8(int v)
 int setBit6to1(int v)
 {
 	// TODO: set bit 6 to 1
-	return v |= 01000000;
+	return v |= 0x40;
 }
 
 int setBit3to0(int v)
 {
 	// TODO: set bit 3 to 0
-	return v &= ~00001000;
+	return v &= ~0x08;
 }
 	
 int flipBit5(int v)
 {
 	// TODO: flip bit 5 (if it is 0, make it 1.  If 0, make 1)
-	return v ^ 00100000;
+	return v ^ 0x20;
 }
 	
 int ifBit7is0(int v)
@@ -38,7 +38,7 @@ int ifBit7is0(int v)
 int ifBit3is1(int v)
 {
 	// check to see if bit 3 is a 1 - return 1 if true, 0 if false
-	if (!(v & (1 << 3))) {
+	if (v & (1 << 3)) {
 		return 1;
 	} else {
 		return 0;
