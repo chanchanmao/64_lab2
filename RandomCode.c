@@ -85,7 +85,7 @@ int setBits4through9(int v, int setValue)
 	setValue &= ((1 << 6) - 1);
 	setValue = setValue << 4;
 	v &= (0x0FFFFFC0F);
-	return v;
+	return v | setValue;
 }
 
 
